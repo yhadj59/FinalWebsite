@@ -8,6 +8,7 @@ import DelegateHub from "@/sections/DelegateHub";
 import GermanNight from "@/sections/GermanNight";
 import VenueTravel from "@/sections/VenueTravel";
 import Announcements from "@/sections/Announcements";
+import ConferenceTeam from "@/sections/ConferenceTeam";
 import type { SectionId } from "@/types";
 
 const sectionIds: SectionId[] = [
@@ -16,6 +17,7 @@ const sectionIds: SectionId[] = [
   "agenda",
   "delegate-hub",
   "special-events",
+  "conference-team",
   "venue-travel",
   "announcements",
 ];
@@ -57,6 +59,7 @@ export default function App() {
         <Agenda />
         <DelegateHub />
         <GermanNight />
+        <ConferenceTeam />
         <VenueTravel />
         <Announcements />
       </main>
