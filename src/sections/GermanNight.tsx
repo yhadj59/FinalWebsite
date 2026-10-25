@@ -22,7 +22,7 @@ const specialEvents = [
     tagline: "Reconnect. Meet. Get to know each other.",
     description:
       "After the first day of RPM, it's time to warm things up. This evening is all about getting to know each other, reconnecting and easing into the conference together before the bigger nights ahead.",
-    image: images.conferenceCrowd,
+    image: "/g2k.png",
     imageAlt: "People connecting at an international conference",
     icon: Users,
     accent: "text-violet-300",
@@ -65,7 +65,7 @@ const specialEvents = [
     tagline: "An evening worth celebrating",
     description:
       "Gala Night is our most elegant evening of RPM, bringing everyone together to celebrate the people, moments and achievements that shaped our region. Inspired by the atmosphere of the opera, expect a night of recognition, celebration and a little bit of show.",
-    image: images.conferenceCrowd,
+    image: "/gala.png",
     imageAlt: "Conference delegates celebrating together",
     icon: Trophy,
     accent: "text-fuchsia-200",
@@ -89,7 +89,7 @@ const specialEvents = [
     tagline: "Bring your country to RPM",
     description:
       "Global Village is your chance to bring your country to RPM and let others experience a little piece of your culture. Each entity will have one or two tables to create its own stand and share what makes its country special. And of course, you'll have time to explore and experience the other entities' stands too!",
-    image: images.conferenceCrowd,
+    image: "/gv.jpeg",
     imageAlt: "International delegates sharing cultures",
     icon: Globe2,
     accent: "text-cyan-200",

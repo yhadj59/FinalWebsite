@@ -1,4 +1,4 @@
-import { MapPin, Check, ExternalLink } from "lucide-react";
+import { MapPin, Check } from "lucide-react";
 import Section, { SectionHeader } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { venueInfo, conference, images } from "@/content";
@@ -18,8 +18,8 @@ export default function VenueTravel() {
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src={images.snowForest}
-                alt="Winter forest landscape near Bielefeld"
+                src="/haus-neuland.jpg"
+                alt="Haus Neuland conference centre in Bielefeld"
                 className="h-[280px] w-full rounded-2xl object-cover sm:h-[360px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
@@ -45,15 +45,6 @@ export default function VenueTravel() {
                   </div>
                 ))}
               </div>
-              <a
-                href={venueInfo.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full border border-ice-400/40 bg-ice-500/10 px-5 py-2.5 text-sm font-medium text-ice-200 transition-all duration-300 hover:bg-ice-500/20 hover:border-ice-400/60"
-              >
-                Visit Haus Neuland Website
-                <ExternalLink className="h-3.5 w-3.5" />
-              </a>
             </div>
           </Reveal>
         </div>
@@ -64,7 +55,7 @@ export default function VenueTravel() {
         <SectionHeader
           eyebrow="Directions"
           title={<>How to <span className="ice-text">find us</span></>}
-          subtitle="Haus Neuland is approximately 15 minutes from Bielefeld Hauptbahnhof by car."
+    
         />
 
         <Reveal>

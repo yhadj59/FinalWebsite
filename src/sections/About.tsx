@@ -47,7 +47,7 @@ export default function About() {
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src={images.conferenceCrowd}
+                src="/about.png"
                 alt="AIESEC leaders coming together at a conference"
                 className="h-[320px] w-full rounded-2xl object-cover sm:h-[400px]"
               />

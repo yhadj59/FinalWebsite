@@ -5,20 +5,27 @@
 // dates, sessions, links, announcements, FAQ entries, or images.
 // ============================================================
 
+
 export const conference = {
   name: "Regional Presidents Meeting Germany 2026",
   shortName: "RPM 2026",
   theme: "THE STARFISH: What AIESEC Can Be",
-  startDateISO: "2026-11-05T17:00:00+01:00", // 5 Nov 2026, 17:00 CET
+  startDateISO: "2026-11-05T17:00:00+01:00",
   datesDisplay: "5–9 November 2026",
   venue: "Haus Neuland",
   city: "Bielefeld",
   country: "Germany",
-  fullAddress: "Haus Neuland, Senner Hellweg 493, 33689 Bielefeld",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Haus+Neuland+Bielefeld",
+
+  fullAddress:
+    "Haus Neuland e.V., Senner Hellweg 493, 33689 Bielefeld, Germany",
+
+  mapsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=Senner+Hellweg+493%2C+33689+Bielefeld%2C+Germany",
+
   mapsEmbed:
-    "https://www.openstreetmap.org/export/embed.html?bbox=8.4830%2C51.9920%2C8.5230%2C52.0120&layer=mapnik&marker=52.0020%2C8.5030",
+    "https://www.openstreetmap.org/export/embed.html?bbox=8.62%2C51.94%2C8.65%2C51.96&layer=mapnik&marker=51.95017%2C8.63461",
 };
+
 
 export const navItems = [
   { label: "Home", id: "home" },
@@ -220,41 +227,7 @@ export const faqs: FAQItem[] = [
   },
 ];
 
-export const travelInfo = {
-  byAir: {
-    title: "By Air",
-    icon: "plane",
-    description: "The nearest major airports are Hannover (HAJ, ~70 km) and Dortmund (DTM, ~50 km). From either airport, take a train to Bielefeld Hauptbahnhof (central station).",
-    steps: [
-      "Fly into Hannover (HAJ) or Dortmund (DTM)",
-      "Take the S-Bahn or airport shuttle to the respective central station",
-      "Board a regional or ICE train to Bielefeld Hbf (approx. 30–45 min)",
-      "At Bielefeld Hbf, take the conference shuttle bus or a taxi to Haus Neuland",
-    ],
-  },
-  byTrain: {
-    title: "By Train",
-    icon: "train",
-    description: "Bielefeld Hauptbahnhof is well connected on the German rail network. ICE, IC and regional trains stop here frequently.",
-    steps: [
-      "Take an ICE, IC or RE train to Bielefeld Hbf",
-      "From the station forecourt, take bus line or shuttle to Haus Neuland",
-      "The venue is approximately 15 minutes by car from the station",
-    ],
-  },
-  byCar: {
-    title: "By Car",
-    icon: "car",
-    description: "Haus Neuland has on-site parking. Enter the address into your navigation: Am Sportfeld 1, 33739 Bielefeld.",
-    steps: [
-      "Set GPS destination: Am Sportfeld 1, 33739 Bielefeld",
-      "Free parking is available on-site at the venue",
-      "Follow signs to the main entrance upon arrival",
-    ],
-  },
-  shuttleNote:
-    "A complimentary shuttle bus will run between Bielefeld Hbf and Haus Neuland on arrival and departure days. The exact schedule will be published closer to the conference date. [Shuttle times TBC]",
-};
+
 
 export const emergencyContacts = [
   { label: "European Emergency Number", value: "112", note: "Free, pan-European emergency number (police, fire, ambulance)" },
@@ -313,5 +286,5 @@ export const venueInfo = {
     "Outdoor spaces for breaks and activities",
   
   ],
-  address: "Am Sportfeld 1, 33739 Bielefeld, Germany",
+  address: "Senner Hellweg 493, 33689 Bielefeld",
 };
