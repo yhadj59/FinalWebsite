@@ -1,4 +1,4 @@
-import { Users, Target, Globe, TrendingUp, Sparkles } from "lucide-react";
+import { Users, Target, Globe, TrendingUp, Sparkles, GitBranch, RefreshCw } from "lucide-react";
 import Section, { SectionHeader } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { images } from "@/content";
@@ -43,7 +43,6 @@ export default function About() {
         />
 
         <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-16">
-          {/* Replace this image with your new RPM photo */}
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl">
               <img
@@ -81,7 +80,94 @@ export default function About() {
         </div>
       </Section>
 
-      
+      {/* The Starfish Concept */}
+      <Section className="bg-navy-950">
+        <SectionHeader
+          eyebrow="The idea behind the theme"
+          title={
+            <>
+              Why the <span className="ice-text">Starfish?</span>
+            </>
+          }
+          subtitle="Two ways of growing. One choice for the future of AIESEC in Europe."
+          centered={false}
+        />
+
+        <Reveal>
+          <div className="mb-10 rounded-2xl border border-violet-300/20 bg-violet-500/5 p-6 sm:p-8">
+            <p className="text-center font-display text-xl font-semibold leading-relaxed text-white sm:text-2xl">
+              Cut off a spider's head, and it dies.
+              <br />
+              <span className="ice-text">
+                Cut off a starfish's arm, and it grows a new one.
+              </span>
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          <Reveal>
+            <div className="glass-card h-full p-6 sm:p-8">
+              <div className="mb-5 inline-flex rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
+                <GitBranch className="h-7 w-7 text-frost-300" />
+              </div>
+
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-frost-300">
+                The challenge
+              </p>
+
+              <h3 className="mb-3 font-display text-2xl font-bold text-white">
+                The Spider
+              </h3>
+
+              <p className="leading-relaxed text-frost-300">
+                Today, AIESEC in Europe risks growing too much like a spider:
+                depending on a few entities, waiting for answers from top
+                leaders, and relying on the center to create momentum.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={150}>
+            <div className="glass-card h-full border border-violet-300/20 p-6 sm:p-8">
+              <div className="mb-5 inline-flex rounded-xl bg-violet-500/10 p-3 ring-1 ring-violet-400/20">
+                <RefreshCw className="h-7 w-7 text-violet-300" />
+              </div>
+
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-violet-200">
+                The possibility
+              </p>
+
+              <h3 className="mb-3 font-display text-2xl font-bold text-white">
+                The Starfish
+              </h3>
+
+              <p className="leading-relaxed text-frost-300">
+                At RPM 2026, we want to become a starfish movement: a region
+                that grows from every entity, every Local Committee, and every
+                leader. A movement held together not by a head, but by a shared
+                essence and culture.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal delay={200}>
+          <div className="mt-8 space-y-5 text-center">
+            <p className="mx-auto max-w-3xl leading-relaxed text-frost-300">
+              In a starfish movement, every leader is an arm — able to take
+              initiative, create impact, and grow from the culture and essence
+              we share. When every part can grow, the entire movement becomes
+              stronger.
+            </p>
+
+            <p className="font-display text-2xl font-bold text-white sm:text-3xl">
+              Are you ready to become a{" "}
+              <span className="ice-text">starfish?</span>
+            </p>
+          </div>
+        </Reveal>
+      </Section>
 
       {/* What delegates can take away */}
       <Section className="bg-navy-950">
