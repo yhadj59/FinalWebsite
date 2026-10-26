@@ -95,7 +95,7 @@ export const agenda: AgendaDay[] = [
     summary: "Arrivals, registration and opening celebrations.",
     sessions: [
       { time: "15:00", title: "Arrivals & Registration", description: "Delegates arrive and check in at Haus Neuland. Collect your badge, welcome pack and accommodation details.", type: "ceremony", location: "Main Lobby" },
-      { time: "17:00", title: "Welcome Address", description: "Official opening of ERC 2026 — meet the Chair team and get an overview of the conference journey ahead.", type: "plenary", location: "Main Hall" },
+      { time: "17:00", title: "Welcome Address", description: "Official opening of RPM 2026 — meet the Chair team and get an overview of the conference journey ahead.", type: "plenary", location: "Main Hall" },
       { time: "19:00", title: "Welcome Dinner", description: "A first taste of German hospitality — dinner buffet featuring regional specialties.", type: "meal", location: "Dining Hall" },
       { time: "20:30", title: "Icebreaker Night", description: "Break the ice with delegates from across Europe through interactive team-building games.", type: "social", location: "Main Hall" },
     ],
@@ -169,61 +169,230 @@ export type ChecklistItem = {
   category: string;
 };
 
+
 export const packingChecklist: ChecklistItem[] = [
-  { id: "passport", label: "Passport or national ID card", category: "Essentials" },
-  { id: "ticket", label: "Conference registration confirmation (printed or digital)", category: "Essentials" },
-  { id: "insurance", label: "Travel / health insurance document", category: "Essentials" },
-  { id: "phone-charger", label: "Phone charger and EU power adapter", category: "Essentials" },
-  { id: "medications", label: "Any personal medications", category: "Essentials" },
-  { id: "warm-jacket", label: "Warm winter jacket", category: "Clothing" },
-  { id: "layers", label: "Layerable clothing for indoor/outdoor transitions", category: "Clothing" },
-  { id: "comfortable-shoes", label: "Comfortable shoes for walking", category: "Clothing" },
-  { id: "formal-wear", label: "Smart-casual outfit for the Gala Dinner", category: "Clothing" },
-  { id: "german-night-outfit", label: "Bavarian or traditional national outfit for German Night", category: "Clothing" },
-  { id: "global-village-items", label: "Country items for Global Village (snacks, flags, decor)", category: "Global Village" },
-  { id: "presentation", label: "Presentation materials if you are facilitating a session", category: "Global Village" },
-  { id: "laptop", label: "Laptop or tablet (optional, for workshops)", category: "Optional" },
-  { id: "reusable-bottle", label: "Reusable water bottle", category: "Optional" },
-  { id: "power-bank", label: "Portable power bank", category: "Optional" },
+  // Essentials
+  {
+    id: "passport",
+    label: "Passport or national ID card",
+    category: "Essentials",
+  },
+  {
+    id: "registration",
+    label: "Conference registration confirmation",
+    category: "Essentials",
+  },
+  {
+    id: "insurance",
+    label: "Travel and health insurance documents",
+    category: "Essentials",
+  },
+  {
+    id: "phone-charger",
+    label: "Phone charger and suitable power adapter",
+    category: "Essentials",
+  },
+  {
+    id: "medication",
+    label: "Personal medication and other personal essentials",
+    category: "Essentials",
+  },
+
+  // Clothing & Accommodation
+  {
+    id: "warm-jacket",
+    label: "Warm jacket for November weather",
+    category: "Clothing & Accommodation",
+  },
+  {
+    id: "layers",
+    label: "Clothing you can layer for indoor and outdoor activities",
+    category: "Clothing & Accommodation",
+  },
+  {
+    id: "comfortable-shoes",
+    label: "Comfortable walking shoes",
+    category: "Clothing & Accommodation",
+  },
+  {
+    id: "gala-outfit",
+    label: "Gala Night outfit",
+    category: "Clothing & Accommodation",
+  },
+  {
+    id: "german-night-outfit",
+    label: "German Night outfit (Dirndl, Lederhosen, or festive clothing)",
+    category: "Clothing & Accommodation",
+  },
+  {
+    id: "towels",
+    label: "Personal towels (bed linen is provided)",
+    category: "Clothing & Accommodation",
+  },
+
+  // Sessions
+  {
+    id: "laptop",
+    label: "Laptop or tablet (if useful for sessions)",
+    category: "Sessions",
+  },
+  {
+    id: "notebook",
+    label: "Notebook and pens",
+    category: "Sessions",
+  },
+  {
+    id: "power-bank",
+    label: "Portable power bank",
+    category: "Sessions",
+  },
+
+  // Global Village
+  {
+    id: "global-village",
+    label: "Food, drinks, souvenirs, or decorations representing your country",
+    category: "Global Village",
+  },
+  {
+    id: "global-village-games",
+    label: "Games or activities to share your culture",
+    category: "Global Village",
+  },
+
+  // Optional Extras
+  {
+    id: "water-bottle",
+    label: "Reusable water bottle",
+    category: "Optional Extras",
+  },
 ];
+
 
 export type FAQItem = {
   question: string;
   answer: string;
+  category: string;
 };
 
 export const faqs: FAQItem[] = [
+  // Before You Arrive
   {
-    question: "How do I register for ERC 2026?",
-    answer: "Registration is managed through your local AIESEC entity. Contact your entity leadership or check your internal AIESEC communication channels for the registration link and deadlines.",
+    category: "Before You Arrive",
+    question: "What should I do before arriving at the conference?",
+    answer:
+      "Please prepare your travel documents and travel insurance. Pack the essentials listed in the Delegate Booklet and plan your route to Haus Neuland.",
   },
   {
-    question: "Is accommodation included in the conference fee?",
-    answer: "Yes, accommodation at Haus Neuland is included for the duration of the conference (5–9 November). You will be assigned a shared room. If you require a single room for medical or other reasons, please contact the organising team in advance.",
+    category: "Before You Arrive",
+    question: "Where can I find the latest conference updates?",
+    answer:
+      "Join the official RPM Telegram group, follow @aiesecineuropeconferences on Instagram (https://www.instagram.com/aiesecineuropeconferences/), check your AIESEC email regularly, and keep an eye on the announcements posted here on the website.",
   },
   {
-    question: "Are meals provided?",
-    answer: "All meals from Thursday dinner through Monday breakfast are included. Vegetarian, vegan and halal options are available at every meal. Please indicate dietary requirements during registration.",
+    category: "Before You Arrive",
+    question: "Who should I contact if I have a question or need help?",
+    answer:
+      "You can reach out to the relevant team member depending on your question:\n\nLogistics (venue, food, etc.): Akın — @a40kyay\nMerch & Social Media: Niki — @nikisarafidou\nTransportation & Visa: Oussama — @ouss_mes\nFinances: rpm@aiesec.de\n\nNot sure whom to contact? Reach out to Jonny (@jonny_becker997), and he'll direct you to the right person.",
+  },
+
+  // Travel & Arrival
+  {
+    category: "Travel & Arrival",
+    question: "How do I get to Haus Neuland?",
+    answer:
+      "Haus Neuland is located at Senner Hellweg 493, 33689 Bielefeld, Germany. Check the Shuttle channel on Telegram for transportation information and choose one of the available shuttle options. If you're travelling by car, free parking is available on-site.",
   },
   {
-    question: "How do I get to Haus Neuland from the airport?",
-    answer: "The nearest major airports are Hannover (HAJ) and Dortmund (DTM). From either airport, take a train to Bielefeld Hauptbahnhof, then a shuttle bus or taxi to Haus Neuland. See the Venue & Travel page for detailed directions.",
+    category: "Travel & Arrival",
+    question: "Where can I find shuttle schedules and pickup locations?",
+    answer:
+      "Check the Shuttle channel on Telegram for the latest information.\n\nDüsseldorf shuttle: Pickup on 5 November at 10:00 at Konrad-Adenauer-Platz 14, 40210 Düsseldorf. Please arrive by 09:45. The return shuttle departs on 9 November at 17:30. Approximate round-trip price: €45.\n\nOerlinghausen shuttle: Pickup at Oerlinghausen railway station on 5 November, with bookable slots every 30 minutes. Approximate round-trip price: €20, subject to availability.",
   },
   {
-    question: "What is the dress code?",
-    answer: "Daytime sessions are smart-casual. The Gala Dinner on Sunday is formal (dress to impress!). German Night on Saturday is Bavarian or traditional national dress — or anything festive and comfortable.",
+    category: "Travel & Arrival",
+    question: "When should I arrive, and when can I leave?",
+    answer:
+      "RPM 2026 takes place from 5–9 November 2026. If you've booked the Düsseldorf shuttle, pickup is on 5 November at 10:00, and the return shuttle departs the venue on 9 November at 17:30. If you're travelling independently or using the Oerlinghausen shuttle, plan according to your booked slot and the conference schedule.",
   },
   {
-    question: "Can I arrive early or stay late?",
-    answer: "Haus Neuland accommodation is available only for the conference dates. If you wish to extend your stay in Bielefeld, please book a hotel independently. The organising team can recommend options.",
+    category: "Travel & Arrival",
+    question: "What should I do if my train or flight is delayed?",
+    answer:
+      "If your journey is delayed, contact the person responsible for transportation as soon as possible. For shuttle-related questions, contact Oussama Messadi via email at oussama.messadi@aiesec.de or on Instagram at @ouss_mes. Please don't assume the shuttle can wait.",
   },
   {
-    question: "Will there be Wi-Fi?",
-    answer: "Yes, complimentary Wi-Fi is available throughout the venue. The network name and password will be provided at registration.",
+    category: "Travel & Arrival",
+    question: "Can I travel to the venue by car, and is parking available?",
+    answer:
+      "Yes, free on-site parking is available at Haus Neuland, Senner Hellweg 493, 33689 Bielefeld, Germany.",
+  },
+
+  // Accommodation & Essentials
+  {
+    category: "Accommodation & Essentials",
+    question: "Will I share a room with other delegates?",
+    answer:
+      "Yes. Room allocation depends on the accommodation options you selected in the registration form.",
   },
   {
-    question: "I have a question not listed here. Who do I contact?",
-    answer: "Email the organising team at the address listed in the Emergency Contacts section of the Delegate Hub, or ask your entity leadership to reach out through official AIESEC channels.",
+    category: "Accommodation & Essentials",
+    question: "Are bed linen and towels provided?",
+    answer:
+      "Bed linen is provided. Please bring your own towels.",
+  },
+  {
+    category: "Accommodation & Essentials",
+    question: "What should I pack for the conference?",
+    answer:
+      "Check the Delegate Hub on this website for the recommended packing list and everything you need to prepare for RPM 2026.",
+  },
+  {
+    category: "Accommodation & Essentials",
+    question: "Should I bring cash, or can I pay by card?",
+    answer:
+      "Please bring cash or make sure you can pay via PayPal. Only cash and PayPal will be accepted.",
+  },
+  {
+    category: "Accommodation & Essentials",
+    question: "Is Wi-Fi available at Haus Neuland?",
+    answer:
+      "Wi-Fi should theoretically be available at Haus Neuland, but we cannot guarantee its reliability or quality. We recommend having mobile data available if possible.",
+  },
+
+  // Conference & Activities
+  {
+    category: "Conference & Activities",
+    question: "Do I need to prepare anything for the sessions?",
+    answer:
+      "Bring a laptop and charger, notebook and pens, and a power bank. And, of course, bring plenty of excitement and motivation! If you're participating in Global Village, coordinate with your delegation and bring items that represent your country.",
+  },
+  {
+    category: "Conference & Activities",
+    question:
+      "Is there a dress code for plenaries, workshops, and evening activities?",
+    answer:
+      "Daytime sessions: Comfortable clothing.\n\nPartner Space: Business-casual clothing.\n\nGala Night: A gala outfit.\n\nOktoberfest / German Night: A Dirndl or Lederhosen if you own one.\n\nBring warm layers and comfortable shoes, and follow any additional instructions from the OC.",
+  },
+  {
+    category: "Conference & Activities",
+    question:
+      "Can I participate in evening activities if I do not drink alcohol?",
+    answer:
+      "Of course! You're welcome to enjoy the social activities regardless of whether you drink alcohol. Check the event information for details about activities and non-alcoholic options.",
+  },
+
+  // Safety & Wellbeing
+  {
+    category: "Safety & Wellbeing",
+    question: "Who can I contact in case of an emergency?",
+    answer:
+      "In any emergency or urgent situation during the conference, please approach the CC Team for assistance.",
+  },
+  {
+    category: "Safety & Wellbeing",
+    question: "What should I do if I feel unwell during the conference?",
+    answer:
+      "If you feel unwell, inform a member of the organizing team so they can help you find appropriate assistance.",
   },
 ];
 
@@ -232,15 +401,11 @@ export const faqs: FAQItem[] = [
 export const emergencyContacts = [
   { label: "European Emergency Number", value: "112", note: "Free, pan-European emergency number (police, fire, ambulance)" },
   { label: "German Police (non-urgent)", value: "110", note: "Non-emergency police assistance" },
-  { label: "Conference Organising Team", value: "[Email TBC]", note: "For conference-related issues during the event" },
-  { label: "Haus Neuland Reception", value: "[Phone TBC]", note: "On-site venue reception, available 24/7 during the conference" },
-  { label: "AIESEC Regional Office", value: "[Contact TBC]", note: "For pre-conference questions via official AIESEC channels" },
+  { label: "Conference Organising Team", value: "rpm@aiesec.de", note: "For conference-related issues during the event" },
+  { label: "Further emergency contacts", value: "[TBD]", note: "On site emergency contacts will be provided once the event approaches" },
 ];
 
 export const importantLinks = [
-  { label: "Register for ERC 2026 [Link TBC]", url: "#", note: "Registration portal (via your AIESEC entity)" },
-  { label: "Conference Info Pack [TBC]", url: "#", note: "Detailed delegate guide (published closer to the event)" },
-  { label: "Haus Neuland Website", url: "https://www.haus-neuland.de", note: "Venue information and facilities" },
   { label: "Deutsche Bahn Journey Planner", url: "https://www.bahn.com/en", note: "Plan train journeys across Germany" },
   { label: "Bielefeld Public Transport (moBiel)", url: "https://www.mobiel.de", note: "Local buses and trams in Bielefeld" },
 ];
