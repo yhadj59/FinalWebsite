@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Clock, MapPin, Sparkles } from "lucide-react";
 import Section, { SectionHeader } from "@/components/Section";
 import Reveal from "@/components/Reveal";
+const showAgenda = false;
 
 type Session = {
   time: string;
@@ -619,100 +620,145 @@ function ParallelSessionCard({ session }: { session: Session }) {
   );
 }
 
+
+
 export default function Agenda() {
   const [activeDay, setActiveDay] = useState(0);
   const day = days[activeDay];
 
   return (
     <Section id="agenda" className="bg-navy-950">
-      <SectionHeader
-        eyebrow="The Programme"
-        title={
-          <>
-            Five days of <span className="ice-text">impact</span>
-          </>
-        }
-        subtitle="Explore the programme of RPM 2026. More daily schedules will be added soon."
-      />
+      {showAgenda ? (
+        <>
+          <SectionHeader
+            eyebrow="The Programme"
+            title={
+              <>
+                Five days of <span className="ice-text">impact</span>
+              </>
+            }
+            subtitle="Explore the programme of RPM 2026. More daily schedules will be added soon."
+          />
 
-      {/* Day selector */}
-      <Reveal>
-        <div className="mb-8 flex gap-3 overflow-x-auto pb-3 sm:justify-center">
-          {days.map((item, index) => (
-            <button
-              key={item.day}
-              type="button"
-              onClick={() => setActiveDay(index)}
-              aria-pressed={activeDay === index}
-              className={`min-w-36 flex-shrink-0 rounded-2xl border px-5 py-4 text-left transition-all duration-300 sm:min-w-44 ${
-                activeDay === index
-                  ? "border-purple-400/50 bg-purple-500/15 ring-1 ring-purple-400/20"
-                  : "glass-card border-white/10 hover:border-purple-400/30"
-              }`}
-            >
-              <div
-                className={`font-display text-sm font-bold ${
-                  activeDay === index ? "text-purple-300" : "text-white"
-                }`}
-              >
-                {item.day}
-              </div>
-              <div className="mt-1 text-xs text-frost-300">
-                {item.date}
-              </div>
-              <div className="mt-1 text-[10px] uppercase tracking-widest text-frost-400">
-                {item.weekday}
-              </div>
-            </button>
-          ))}
-        </div>
-      </Reveal>
-
-      
-    {/* Selected day heading and goal */}
-    <Reveal key={day.day}>
-      <div className="mb-7 text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
-          {day.day} · {day.date}
-        </p>
-
-        <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
-          {day.theme}
-        </h3>
-
-        <div className="mx-auto mt-6 max-w-3xl rounded-2xl border border-violet-300/20 bg-violet-500/5 p-5 text-left sm:p-7">
-          <div className="mb-3 flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-violet-300" />
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
-              Goal of the Day
-            </p>
-          </div>
-
-          <p className="text-base leading-relaxed text-frost-300 sm:text-lg">
-            {day.goal}
-          </p>
-        </div>
-      </div>
-
-      {/* Chronological timeline */}
-      <div className="space-y-3">
-        {day.sessions.map((session, index) => (
-          <Reveal
-            key={`${day.day}-${index}`}
-            delay={Math.min(index * 25, 200)}
-          >
-            {session.tracks ? (
-              <ParallelSessionCard session={session} />
-            ) : (
-              <SessionCard session={session} />
-            )}
+          {/* Day selector */}
+          <Reveal>
+            <div className="mb-8 flex gap-3 overflow-x-auto pb-3 sm:justify-center">
+              {days.map((item, index) => (
+                <button
+                  key={item.day}
+                  type="button"
+                  onClick={() => setActiveDay(index)}
+                  aria-pressed={activeDay === index}
+                  className={`min-w-36 flex-shrink-0 rounded-2xl border px-5 py-4 text-left transition-all duration-300 sm:min-w-44 ${
+                    activeDay === index
+                      ? "border-purple-400/50 bg-purple-500/15 ring-1 ring-purple-400/20"
+                      : "glass-card border-white/10 hover:border-purple-400/30"
+                  }`}
+                >
+                  <div
+                    className={`font-display text-sm font-bold ${
+                      activeDay === index ? "text-purple-300" : "text-white"
+                    }`}
+                  >
+                    {item.day}
+                  </div>
+                  <div className="mt-1 text-xs text-frost-300">
+                    {item.date}
+                  </div>
+                  <div className="mt-1 text-[10px] uppercase tracking-widest text-frost-400">
+                    {item.weekday}
+                  </div>
+                </button>
+              ))}
+            </div>
           </Reveal>
-        ))}
-      </div>
-    </Reveal>
 
+          {/* Selected day heading and goal */}
+          <Reveal key={day.day}>
+            <div className="mb-7 text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
+                {day.day} · {day.date}
+              </p>
 
-      
+              <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+                {day.theme}
+              </h3>
+
+              <div className="mx-auto mt-6 max-w-3xl rounded-2xl border border-violet-300/20 bg-violet-500/5 p-5 text-left sm:p-7">
+                <div className="mb-3 flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-violet-300" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
+                    Goal of the Day
+                  </p>
+                </div>
+
+                <p className="text-base leading-relaxed text-frost-300 sm:text-lg">
+                  {day.goal}
+                </p>
+              </div>
+            </div>
+
+            {/* Chronological timeline */}
+            <div className="space-y-3">
+              {day.sessions.map((session, index) => (
+                <Reveal
+                  key={`${day.day}-${index}`}
+                  delay={Math.min(index * 25, 200)}
+                >
+                  {session.tracks ? (
+                    <ParallelSessionCard session={session} />
+                  ) : (
+                    <SessionCard session={session} />
+                  )}
+                </Reveal>
+              ))}
+            </div>
+          </Reveal>
+        </>
+      ) : (
+        <>
+          <SectionHeader
+            eyebrow="THE RPM EXPERIENCE"
+            title={
+              <>
+                The Programme <span className="ice-text">Awaits</span>
+              </>
+            }
+            subtitle="The details are coming together. Get ready for five days of connection, learning, and impact."
+          />
+
+          <Reveal>
+            <div className="mx-auto mt-12 max-w-3xl">
+              <div className="glass-card relative overflow-hidden rounded-3xl border border-violet-300/20 px-6 py-16 text-center sm:px-12">
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-purple-400/10" />
+
+                <div className="relative">
+                  <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-violet-300/30 bg-violet-400/10">
+                    <Sparkles className="h-9 w-9 text-violet-300" />
+                  </div>
+
+                  <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">
+                    Agenda will be revealed soon
+                  </h3>
+
+                  <p className="mx-auto mt-4 max-w-xl leading-relaxed text-frost-300">
+                    We're putting the final pieces together to make RPM 2026
+                    an unforgettable experience. Stay tuned — the full
+                    programme is coming soon!
+                  </p>
+
+                  <div className="mt-8 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-violet-200/80">
+                    <span className="h-px w-8 bg-violet-300/40" />
+                    Something exciting is coming
+                    <span className="h-px w-8 bg-violet-300/40" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </>
+      )}
     </Section>
   );
 }
+

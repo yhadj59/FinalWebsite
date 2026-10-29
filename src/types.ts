@@ -3,6 +3,8 @@ export type SectionId =
   | "about"
   | "agenda"
   | "delegate-hub"
-  | "german-night"
+  | "conference-team"
+  | "special-events"
   | "venue-travel"
+  | "sponsors"
   | "announcements";

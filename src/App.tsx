@@ -9,6 +9,7 @@ import GermanNight from "@/sections/GermanNight";
 import VenueTravel from "@/sections/VenueTravel";
 import Announcements from "@/sections/Announcements";
 import ConferenceTeam from "@/sections/ConferenceTeam";
+import Sponsors from "@/sections/Sponsors";
 import type { SectionId } from "@/types";
 
 const sectionIds: SectionId[] = [
@@ -20,6 +21,7 @@ const sectionIds: SectionId[] = [
   "conference-team",
   "venue-travel",
   "announcements",
+  "sponsors",
 ];
 
 export default function App() {
@@ -62,6 +64,7 @@ export default function App() {
         <ConferenceTeam />
         <VenueTravel />
         <Announcements />
+        <Sponsors />
       </main>
       <Footer onNavigate={navigate} />
     </div>

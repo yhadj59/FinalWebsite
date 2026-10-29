@@ -104,9 +104,28 @@ const teams = [
       },
     ],
   },
+    
+  {
+    id: "chair",
+    number: "03",
+    title: "Chair",
+    subtitle: "Conference Chair",
+    description:
+      "The Chair guiding the conference experience and supporting the team in bringing RPM 26 Germany to life.",
+    icon: Sparkles,
+    members: [
+      {
+        name: "Surprise",
+        function: "Chair",
+        telegram: "",
+        photo: "/team/chair/chair.png",
+      },
+    ],
+  },
+
     {
     id: "facis",
-    number: "03",
+    number: "04",
     title: "Facis",
     subtitle: "Facilitators",
     description:

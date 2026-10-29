@@ -35,6 +35,7 @@ export const navItems = [
   { label: "Special Events", id: "special-events" },
   { label: "Conference Team", id: "conference-team" },
   { label: "Venue & Travel", id: "venue-travel" },
+  
 ];
 
 export const images = {
