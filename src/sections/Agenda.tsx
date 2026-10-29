@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, Sparkles } from "lucide-react";
 import Section, { SectionHeader } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 
@@ -20,6 +20,7 @@ type AgendaDay = {
   date: string;
   weekday: string;
   theme: string;
+  goal: string;
   sessions: Session[];
 };
 
@@ -30,6 +31,8 @@ const day1: AgendaDay = {
   date: "5 November",
   weekday: "Thursday",
   theme: "True to Our Essence",
+  goal:
+  "A starfish that has no head: what holds it together is shared DNA. That's what we want to strengthen, as staying true to our essence is what makes us strong as AIESEC.",
   sessions: [
     { time: "Until 11:45", title: "Arrival", type: "social" },
     { time: "11:45–14:00", title: "Delegates Check in", type: "session" },
@@ -68,6 +71,8 @@ const day2: AgendaDay = {
   date: "6 November",
   weekday: "Friday",
   theme: "Spot the Spider",
+  goal:
+  "We own our reality fully because it starts with us. When we own something, we always think about what we can do about it.",
   sessions: [
     { time: "Until 09:30", title: "Breakfast", type: "meal" },
     { time: "09:30–10:15", title: "Morning Plenary", type: "session" },
@@ -128,7 +133,354 @@ const day2: AgendaDay = {
   ],
 };
 
-const days = [day1, day2];
+
+const day3: AgendaDay = {
+  day: "Day 3",
+  date: "7 November",
+  weekday: "Saturday",
+  theme: "Grow An Arm 💪🏻",
+  goal:
+    "x10 is easier than x2. We must design an AIESEC that can move faster than the environment.",
+  sessions: [
+    { time: "Until 09:30", title: "Breakfast", type: "meal" },
+    { time: "09:30–10:30", title: "Morning Plenary 🌞", type: "session" },
+    { time: "10:30–10:45", title: "15-minute break", type: "break" },
+    {
+      time: "10:45–11:45",
+      title: "A2030 Regional Next Steps",
+      type: "session",
+    },
+    { time: "11:45–12:00", title: "15-minute break", type: "break" },
+    {
+      time: "12:00–12:30",
+      title: "Keynote: Grow an Arm",
+      type: "session",
+    },
+    {
+      time: "12:30–13:30",
+      title: "Parallel tracks",
+      tracks: [
+        {
+          label: "LCPs · Backoffice",
+          title: "Growing an Arm",
+          color: "green",
+        },
+        {
+          label: "LCPs · OPS & ER",
+          title: "Growing an Arm",
+          color: "purple",
+        },
+        {
+          label: "LCPs · No LCVP Experience",
+          title: "Growing an Arm",
+          color: "blue",
+        },
+        {
+          label: "MCPs",
+          title: "OD Model Understanding",
+          color: "green",
+        },
+      ],
+    },
+    { time: "13:30–14:45", title: "Lunch", type: "meal" },
+    {
+      time: "14:45–15:45",
+      title: "Parallel tracks",
+      tracks: [
+        {
+          label: "LCPe · Clusters 3–5",
+          title: "The Catalyst of Performance",
+          color: "green",
+        },
+        {
+          label: "LCPe · Clusters 1–2",
+          title: "The Catalyst of Performance",
+          color: "purple",
+        },
+        {
+          label: "LCPc · OPS Clusters 5–3",
+          title: "The Catalyst of Exchange",
+          color: "blue",
+        },
+        {
+          label: "LCPc · OPS Clusters 5–3 (confirm)",
+          title: "The Catalyst of Exchange",
+          color: "green",
+        },
+        {
+          label: "MCPs",
+          title: "Stakeholder Management",
+          color: "purple",
+        },
+      ],
+    },
+    { time: "15:45–16:00", title: "15-minute break", type: "break" },
+    {
+      time: "16:00–17:15",
+      title: "Parallel tracks",
+      tracks: [
+        {
+          label: "LCPe",
+          title: "SnD for Operations Timeline Understanding and Alignment",
+          color: "green",
+        },
+        {
+          label: "LCPc",
+          title: "Performance Management in Double Power",
+          color: "purple",
+        },
+        {
+          label: "MCPs",
+          title: "Building the Disruptive Peak",
+          color: "blue",
+        },
+      ],
+    },
+    { time: "17:15–17:45", title: "30-minute break", type: "break" },
+    {
+      time: "17:45–18:45",
+      title: "Parallel tracks",
+      tracks: [
+        {
+          label: "LCPs",
+          title: "10X Growing Europe – The Catalyst Leader",
+          color: "green",
+        },
+        {
+          label: "MCPs",
+          title: "RPM Legislation",
+          color: "blue",
+        },
+      ],
+    },
+    { time: "18:45–20:00", title: "Dinner", type: "meal" },
+    {
+      time: "20:00–20:15",
+      title: "How far can we go?",
+      type: "session",
+    },
+    {
+      time: "20:15–21:15",
+      title: "Evening Plenary ✨",
+      type: "session",
+    },
+    {
+      time: "21:15–22:00",
+      title: "Dress to Impress: Get Ready for Gala",
+      type: "session",
+    },
+    {
+      time: "22:00–00:00",
+      title: "Gala Night",
+      type: "social",
+    },
+  ],
+};
+
+const day4: AgendaDay = {
+  day: "Day 4",
+  date: "8 November",
+  weekday: "Sunday",
+  theme: "Be The Catalyst",
+  goal:
+    "A disruptive leader doesn't hold all the answers, yet builds the environment for others to get their own answers. A catalyst sparks the change, then lets others lead it.",
+  sessions: [
+    { time: "Until 09:30", title: "Breakfast", type: "meal" },
+    { time: "09:30 – 10:30", title: "Morning Plenary 🌞" },
+    { time: "10:30 – 10:45", title: "15 min break", type: "break" },
+
+    {
+      time: "10:45 – 11:45",
+      title: "Split Tracks",
+      tracks: [
+        {
+          label: "LCPs",
+          title: "Resources Management in My LC",
+          color: "green",
+        },
+        {
+          label: "MCPs",
+          title: "Self Leadership",
+          color: "purple",
+        },
+      ],
+    },
+
+    { time: "11:45 – 12:00", title: "15 min break", type: "break" },
+
+    {
+      time: "12:00 – 13:00",
+      title: "Split Tracks",
+      tracks: [
+        {
+          label: "LCPe · No EBe",
+          title: "How to Build Pipeline & Select My EB",
+          color: "green",
+        },
+        {
+          label: "LCPc",
+          title: "Choose Your Battles",
+          color: "purple",
+        },
+        {
+          label: "MCPs",
+          title: "BoP Building & Management",
+          color: "blue",
+        },
+      ],
+    },
+
+    { time: "13:00 – 14:15", title: "Lunch", type: "meal" },
+
+    {
+      time: "14:15 – 15:15",
+      title: "Split Tracks",
+      tracks: [
+        {
+          label: "LCPs",
+          title: "Culture for Exchange",
+          color: "green",
+        },
+        {
+          label: "MCPs",
+          title: "MCPs Secret Space",
+          color: "purple",
+        },
+      ],
+    },
+
+    { time: "15:15 – 15:30", title: "15 min break", type: "break" },
+
+    {
+      time: "15:30 – 16:30",
+      title: "Split Tracks",
+      tracks: [
+        {
+          label: "LCP · Low Cluster · No Predecessor",
+          title: "Transition Management",
+          color: "green",
+        },
+        {
+          label: "LCP · Low Cluster · With Predecessor",
+          title: "Transition Management",
+          color: "purple",
+        },
+        {
+          label: "LCP · Higher Cluster",
+          title: "How to Maximize Your Transition",
+          color: "blue",
+        },
+        {
+          label: "MCPs",
+          title: "Replanning Management",
+          color: "green",
+        },
+      ],
+    },
+
+    { time: "16:30 – 16:45", title: "15 min break", type: "break" },
+
+    {
+      time: "16:45 – 17:15",
+      title: "Keynote: Be the Catalyst",
+    },
+
+    { time: "17:15 – 17:45", title: "30 min break", type: "break" },
+
+    { time: "17:45 – 18:00", title: "How Far Can We Go?" },
+    { time: "18:00 – 19:00", title: "Evening Plenary ✨" },
+
+    { time: "19:00 – 20:15", title: "Dinner", type: "meal" },
+
+    {
+      time: "20:15 – 21:30",
+      title: "10X Growing Europe – 10X Growth",
+      type: "social",
+    },
+
+    { time: "21:30 – 22:00", title: "Delegation Time", type: "social" },
+
+    {
+      time: "22:00 – Open End",
+      title: "Global Village",
+      type: "social",
+    },
+  ],
+};
+
+
+const day5: AgendaDay = {
+  day: "Day 5",
+  date: "9 November",
+  weekday: "Monday",
+  theme: "Become the Starfish",
+  goal: "The biggest question we need to imagine: What AIESEC can be...",
+  sessions: [
+    { time: "Until 10:00", title: "Breakfast", type: "meal" },
+    { time: "10:00 – 11:00", title: "Morning Plenary 🌞" },
+    { time: "11:00 – 11:15", title: "15 min break", type: "break" },
+
+    {
+      time: "11:15 – 12:15",
+      title: "Split Tracks",
+      tracks: [
+        {
+          label: "LCPe",
+          title: "Design What Comes Next",
+          color: "green",
+        },
+        {
+          label: "LCPc",
+          title: "Design What Comes Next",
+          color: "purple",
+        },
+        {
+          label: "MCPs",
+          title: "RD 2027 Talks",
+          color: "blue",
+        },
+      ],
+    },
+
+    { time: "12:15 – 12:30", title: "15 min break", type: "break" },
+
+    {
+      time: "12:30 – 13:30",
+      title: "Split Tracks",
+      tracks: [
+        {
+          label: "LCPe",
+          title: "Track Closing: Becoming the Starfish",
+          color: "green",
+        },
+        {
+          label: "LCPc",
+          title: "Track Closing: Keep the Starfish Growing",
+          color: "purple",
+        },
+        {
+          label: "MCPs",
+          title: "2 MCPs, 1 Entity: Elections & Team Dynamics",
+          color: "blue",
+        },
+      ],
+    },
+
+    { time: "13:30 – 14:45", title: "Lunch", type: "meal" },
+
+    { time: "14:45 – 15:30", title: "What AIESEC Can Be..." },
+
+    { time: "15:30 – 15:45", title: "15 min break", type: "break" },
+
+    { time: "15:45 – 16:00", title: "How Far Can We Go?" },
+
+    { time: "16:00 – 17:15", title: "Closing Plenary 💜" },
+  ],
+};
+
+
+
+const days = [day1, day2, day3, day4, day5];
 
 const trackColors = {
   green: {
@@ -316,45 +668,51 @@ export default function Agenda() {
         </div>
       </Reveal>
 
-      {/* Selected day heading */}
-      <Reveal key={day.day}>
-        <div className="mb-7 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
-            {day.day} · {day.date}
-          </p>
-          <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
-            {day.theme}
-          </h3>
-        </div>
+      
+    {/* Selected day heading and goal */}
+    <Reveal key={day.day}>
+      <div className="mb-7 text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
+          {day.day} · {day.date}
+        </p>
 
-        {/* Chronological timeline */}
-        <div className="space-y-3">
-          {day.sessions.map((session, index) => (
-            <Reveal
-              key={`${day.day}-${index}`}
-              delay={Math.min(index * 25, 200)}
-            >
-              {session.tracks ? (
-                <ParallelSessionCard session={session} />
-              ) : (
-                <SessionCard session={session} />
-              )}
-            </Reveal>
-          ))}
-        </div>
-      </Reveal>
+        <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+          {day.theme}
+        </h3>
 
-      {/* Upcoming days */}
-      <Reveal>
-        <div className="mt-8 rounded-2xl border border-purple-400/20 bg-purple-500/5 p-5 text-center">
-          <p className="font-display text-sm font-semibold text-purple-200">
-            More of the Starfish journey is coming
-          </p>
-          <p className="mt-1 text-sm text-frost-300">
-            Days 3–5 will be added as their programmes are confirmed.
+        <div className="mx-auto mt-6 max-w-3xl rounded-2xl border border-violet-300/20 bg-violet-500/5 p-5 text-left sm:p-7">
+          <div className="mb-3 flex items-center gap-2">
+            <Sparkles className="h-5 w-5 text-violet-300" />
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
+              Goal of the Day
+            </p>
+          </div>
+
+          <p className="text-base leading-relaxed text-frost-300 sm:text-lg">
+            {day.goal}
           </p>
         </div>
-      </Reveal>
+      </div>
+
+      {/* Chronological timeline */}
+      <div className="space-y-3">
+        {day.sessions.map((session, index) => (
+          <Reveal
+            key={`${day.day}-${index}`}
+            delay={Math.min(index * 25, 200)}
+          >
+            {session.tracks ? (
+              <ParallelSessionCard session={session} />
+            ) : (
+              <SessionCard session={session} />
+            )}
+          </Reveal>
+        ))}
+      </div>
+    </Reveal>
+
+
+      
     </Section>
   );
 }

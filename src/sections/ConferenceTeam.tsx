@@ -104,7 +104,7 @@ const teams = [
       },
     ],
   },
-  {
+    {
     id: "facis",
     number: "03",
     title: "Facis",
@@ -112,12 +112,98 @@ const teams = [
     description:
       "The facilitators creating learning experiences, meaningful conversations, and new perspectives.",
     icon: GraduationCap,
-    members: Array.from({ length: 17 }, (_, index) => ({
-      name: `Faci ${index + 1}`,
-      function: "Facilitator",
-      telegram: "",
-      photo: "",
-    })),
+    members: [
+      {
+        name: "Aleyna",
+        function: "PAI / Faci",
+        telegram: "Aleyloy",
+        photo: "/team/facis-team/Aleyna.jpeg",
+      },
+      {
+        name: "Anson",
+        function: "AI 2026 / Faci",
+        telegram: "ansoncyh",
+        photo: "/team/facis-team/Anson.JPG",
+      },
+      {
+        name: "Yana",
+        function: "Regional Team / Faci",
+        telegram: "yana_osmachko",
+        photo: "/team/facis-team/Yana.jpg",
+      },
+      {
+        name: "Firas",
+        function: "Regional Team / Faci",
+        telegram: "FirasAtigui",
+        photo: "/team/facis-team/Firas.png",
+      },
+      {
+        name: "George",
+        function: "Regional Team / Faci",
+        telegram: "Georgio_Pap",
+        photo: "/team/facis-team/George.jpeg",
+      },
+      {
+        name: "Katerina",
+        function: "Regional Team / Faci",
+        telegram: "ToKelepouriSou",
+        photo: "/team/facis-team/Katerinaa.JPG",
+      },
+      {
+        name: "Katerina",
+        function: "Regional Team / Faci",
+        telegram: "katerinatasopoulou",
+        photo: "/team/facis-team/Katerina.jpg",
+      },
+      {
+        name: "Aziz",
+        function: "MCP Tunisia / Faci",
+        telegram: "azizbecher",
+        photo: "/team/facis-team/Aziz.png",
+      },
+      {
+        name: "Celos",
+        function: "MCP Portugal / Faci",
+        telegram: "diogofv1",
+        photo: "/team/facis-team/Diogo.jpeg",
+      },
+      {
+        name: "Sofi",
+        function: "MCP Hungary / Faci",
+        telegram: "sofipp6",
+        photo: "/team/facis-team/Sofi.jpg",
+      },
+      {
+        name: "Rozhan",
+        function: "MCVP iCX Germany / Faci",
+        telegram: "rzhn_kh",
+        photo: "/team/facis-team/Rozhan.jpeg",
+      },
+      {
+        name: "Olti",
+        function: "MCVP OD Romania / Faci",
+        telegram: "ioanaoltean",
+        photo: "/team/facis-team/Olti.jpeg",
+      },
+      {
+        name: "Gülfidan",
+        function: "MCVP OPS Turkey / Faci",
+        telegram: "gulfidanhanli",
+        photo: "/team/facis-team/Gülfidan.jpeg",
+      },
+      {
+        name: "Sofia",
+        function: "MCVP MKT Netherlands / Faci",
+        telegram: "sofiahdalmeida",
+        photo: "/team/facis-team/Sofia.jpeg",
+      },
+      {
+        name: "Ioanna",
+        function: "MCVP OD Greece / Faci",
+        telegram: "Ioanna_Evangeli",
+        photo: "/team/facis-team/Ioanna.jpg",
+      },
+    ],
   },
 ];
 

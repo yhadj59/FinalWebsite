@@ -399,15 +399,61 @@ export const faqs: FAQItem[] = [
 
 
 export const emergencyContacts = [
-  { label: "European Emergency Number", value: "112", note: "Free, pan-European emergency number (police, fire, ambulance)" },
-  { label: "German Police (non-urgent)", value: "110", note: "Non-emergency police assistance" },
-  { label: "Conference Organising Team", value: "rpm@aiesec.de", note: "For conference-related issues during the event" },
-  { label: "Further emergency contacts", value: "[TBD]", note: "On site emergency contacts will be provided once the event approaches" },
+  
+  {
+    label: "Conference Organising Team",
+    value: "rpm@aiesec.de",
+    note: "For conference-related issues during the event",
+  },
+  {
+    label: "Transportation Questions — Oussama",
+    value: "@ouss_mes",
+    note: "Contact Oussama on Telegram for shuttle bookings and transportation questions",
+  },
+  {
+    label: "Overall Logistics — Akin",
+    value: "@a40kyay",
+    note: "Contact Akin on Telegram for venue and general logistics questions",
+  },
+  {
+    label: "European Emergency Number",
+    value: "112",
+    note: "Free, pan-European emergency number for police, fire, and ambulance services",
+  },
+  {
+    label: "German Police",
+    value: "110",
+    note: "Emergency police assistance in Germany",
+  },
 ];
 
 export const importantLinks = [
-  { label: "Deutsche Bahn Journey Planner", url: "https://www.bahn.com/en", note: "Plan train journeys across Germany" },
-  { label: "Bielefeld Public Transport (moBiel)", url: "https://www.mobiel.de", note: "Local buses and trams in Bielefeld" },
+
+{
+label: "Book Shuttle: Oerlinghausen → Haus Neuland",
+url: "https://calendly.com/oussama-messadi-aiesec/rpm-shuttle-oerlinghausen-haus-neuland",
+note: "Book your shuttle from Oerlinghausen station to the conference venue",
+},
+{
+label: "Book Return Shuttle: Haus Neuland → Oerlinghausen",
+url: "https://calendly.com/oussama-messadi-aiesec/rpm-shuttle-haus-neuland-oerlinghausen",
+note: "Book your return shuttle from the conference venue to Oerlinghausen station",
+},
+{
+label: "RPM 2026 Conference Booklet",
+url: "https://go.aiesec.de/rpm-delegate-booklet",
+note: "Find important conference information and prepare for your experience",
+},
+{
+label: "Deutsche Bahn Journey Planner",
+url: "https://www.bahn.com/en",
+note: "Plan train journeys across Germany",
+},
+{
+label: "Bielefeld Public Transport (moBiel)",
+url: "https://www.mobiel.de",
+note: "Local buses and trams in Bielefeld",
+},
 ];
 
 export const announcements = [
