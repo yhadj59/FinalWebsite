@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Clock, MapPin, Sparkles } from "lucide-react";
 import Section, { SectionHeader } from "@/components/Section";
 import Reveal from "@/components/Reveal";
-const showAgenda = false;
+const showAgenda = true;
 
 type Session = {
   time: string;

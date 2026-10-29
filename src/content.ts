@@ -474,13 +474,7 @@ export const announcements = [
     title: "Global Village — bring your country booth",
     body: "Each delegation will host a country booth with food, drinks, music and culture. Please coordinate with your entity and bring items from home. Booth spaces will be assigned at the venue.",
   },
-  {
-    date: "23 Oct 2026",
-    tag: "Programme",
-    priority: "info" as const,
-    title: "Full programme coming soon",
-    body: "The agenda shown on this site is a placeholder. The final programme with confirmed session times, facilitators and locations will be published approximately 2 weeks before the conference. [Programme TBC]",
-  },
+  
 ];
 
 
