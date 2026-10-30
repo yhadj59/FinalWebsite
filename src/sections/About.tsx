@@ -6,8 +6,8 @@ import { images } from "@/content";
 const pillars = [
   {
     icon: Users,
-    title: "Connect",
-    desc: "Connect with fellow presidents who share your challenges, ambitions, and responsibility for growing AIESEC.",
+    title: "Engage",
+    desc: "Engage with fellow presidents who share your challenges, ambitions, and responsibility for growing AIESEC.",
   },
   {
     icon: Target,
