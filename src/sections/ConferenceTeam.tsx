@@ -97,7 +97,7 @@ const teams = [
         photo: "/team/core-team/Christina.JPG",
       },
       {
-        name: "Anastasia",
+        name: "Anastassia",
         function: "Agenda Manager",
         telegram: "anastasiia_shykera",
         photo: "/team/core-team/Anastasia.jpeg",

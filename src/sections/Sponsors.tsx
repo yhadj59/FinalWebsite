@@ -3,12 +3,28 @@ import Section from "@/components/Section";
 import { SectionHeader } from "@/components/Section";
 
 const sponsors = [
-  { name: "Sponsor One", logo: "/sponsors/sponsor-one.png" },
-  { name: "Sponsor Two", logo: "/sponsors/sponsor-two.png" },
-  { name: "Sponsor Three", logo: "/sponsors/sponsor-three.png" },
-  { name: "Sponsor Four", logo: "/sponsors/sponsor-four.png" },
-  { name: "Sponsor Five", logo: "/sponsors/sponsor-five.png" },
-  { name: "Sponsor Six", logo: "/sponsors/sponsor-six.png" },
+  { name: "Mondelez", logo: "/sponsors/Mondelez_International.svg.webp" },
+  { name: "Allied", logo: "/sponsors/Allied.webp" },
+  { name: "Breitsamer Honig", logo: "/sponsors/breitsamer.png" },
+  { name: "Dr. Oetker", logo: "/sponsors/Dr._Oetker-Logo.svg.webp" },
+  { name: "Zetti", logo: "/sponsors/Zetti_Logo_2024.svg" },
+  { name: "Bohlsner Mühle", logo: "/sponsors/Bohlsener.png" },
+  { name: "Flash U", logo: "/sponsors/FlashU.jpg" },
+  { name: "Stadt Bielefeld", logo: "/sponsors/Logo_BI_Stadt_Bielefeld_sRGB.png" },
+  { name: "Mizaru", logo: "/sponsors/mizaru_Logo.webp" },
+  { name: "Pur Ya!", logo: "/sponsors/PURYA_Logo_R_pos.webp" },
+  { name: "Fair Squared", logo: "/sponsors/logo-fair-squared.png" },
+  { name: "HK Hotel Düsseldorf City", logo: "/sponsors/Google-Logo-HK-Hotel-Duesseldorf.png" },
+  { name: "Deutssches Jugendherbergswerk", logo: "/sponsors/Deutsches_Jugendherbergswerk_logo.svg" },
+  { name: "Grafschaftler Karnevalsgesellschaft Reitberg e.V.", logo: "/sponsors/LogoGK_Vektor_RGB-216x300.png" },
+  { name: "Malnut", logo: "/sponsors/logo_Malunt-02.webp" },
+  { name: "Laziz food", logo: "/sponsors/logo.webp" },
+  { name: "Jake's Beverages", logo: "/sponsors/images (1).png" },
+  { name: "Detmolder Pilsener", logo: "/sponsors/images.jpg" },
+  { name: "Plant for the Planet", logo: "/sponsors/images.png" },
+  { name: "Limoment", logo: "/sponsors/Logo_Limoment.webp" },
+  { name: "Gönrgy", logo: "/sponsors/Gönrgy.webp" },
+  { name: "Hans Stockmar", logo: "/sponsors/Hans_Stockmar_Logo.svg" },
 ];
 
 export default function Sponsors() {

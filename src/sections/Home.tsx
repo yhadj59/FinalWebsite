@@ -81,7 +81,7 @@ export default function Home({ onNavigate }: Props) {
 
         {/* Event details */}
         <div
-          className="mt-8 flex animate-fade-in-up flex-col items-center gap-4 sm:flex-row"
+          className="mt-15 flex animate-fade-in-up flex-col items-center gap-4 sm:flex-row"
           style={{ animationDelay: "400ms" }}
         >
           <div className="glass-card flex items-center gap-2 rounded-full px-5 py-2.5">

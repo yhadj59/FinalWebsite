@@ -78,54 +78,61 @@ const day2: AgendaDay = {
     { time: "Until 09:30", title: "Breakfast", type: "meal" },
     { time: "09:30–10:15", title: "Morning Plenary", type: "session" },
     { time: "10:15–10:30", title: "15-minute break", type: "break" },
-    { time: "10:30–13:30", title: "Partner Space", type: "session" },
+    { time: "10:30–10:45", title: "Welcoming Note to Partners Day", type: "session" },
+    { time: "10:45–11:15", title: "Keynote from Thermondo & Q&A", type: "session" },
+    { time: "11:15–11:30", title: "Networking Break", type: "break" },
+    { time: "11:30–12:00", title: "Keynote from Ecosia & Q&A", type: "session" },
+    { time: "12:00–12:30", title: "Keynote from AAE | Christiane Stein", type: "session" },
+    { time: "12:30–12:45", title: "Networking Break", type: "break" },
+    { time: "12:45–13:30", title: "A2030 Current context", type: "session" },
     { time: "13:30–14:45", title: "Lunch", type: "meal" },
-    { time: "14:45–15:30", title: "A2030 Current context", type: "session" },
-    { time: "15:30–15:45", title: "15-minute break", type: "break" },
     {
-      time: "15:45–16:15",
+      time: "14:45–15:45",
+      title: "Parallel tracks",
+      tracks: [
+        {
+          label: "LCPe + LCPc",
+          title: "Who are we competing with?",
+          color: "green",
+        },
+        {
+          label: "MCPs",
+          title: "Who are we competing with?",
+          color: "blue",
+        },
+      ],
+    },
+    { time: "15:45–16:00", title: "15-minute break", type: "break" },
+
+    {
+      time: "16:00–16:30",
       title: "Keynote: Spot the Spider",
       type: "session",
     },
-    { time: "16:15–16:30", title: "15-minute break", type: "break" },
+    
     {
       time: "16:30–17:30",
       title: "Parallel tracks",
       tracks: [
         {
           label: "LCPe + LCPc",
-          title: "Who are we competing with?",
+          title: "How do I grow people?",
           color: "green",
         },
         {
           label: "MCPs",
-          title: "Who are we competing with?",
+          title: "How do I grow people?",
           color: "blue",
         },
       ],
     },
     { time: "17:30–17:45", title: "15-minute break", type: "break" },
-    {
-      time: "17:45–18:45",
-      title: "Parallel tracks",
-      tracks: [
-        {
-          label: "LCPe + LCPc",
-          title: "How do I grow people?",
-          color: "green",
-        },
-        {
-          label: "MCPs",
-          title: "How do I grow people?",
-          color: "blue",
-        },
-      ],
-    },
-    { time: "18:45–20:00", title: "Dinner", type: "meal" },
-    { time: "20:00–20:15", title: "How far can we go?", type: "session" },
-    { time: "20:15–21:15", title: "Evening Plenary", type: "session" },
-    { time: "21:15–21:45", title: "Delegation time", type: "session" },
-    { time: "21:45–22:30", title: "Bonfire chats", type: "social" },
+    { time: "17:45–18:00", title: "How far can we go?", type: "session" },
+    { time: "18:00–19:00", title: "Evening Plenary", type: "session" },
+    { time: "19:00–20:30", title: "Dinner", type: "meal" },
+    { time: "20:30–21:30", title: "Bonfire chats", type: "social" },
+
+    { time: "21:30–22:30", title: "Delegation time", type: "session" },
     {
       time: "22:30–open end",
       title: "German night: Oktoberfest",
